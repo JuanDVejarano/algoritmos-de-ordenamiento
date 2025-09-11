@@ -1,0 +1,83 @@
+.cardBackground {
+    border-radius: 4px;
+    padding: 8px;
+    padding-bottom: 35px;
+    margin: 16px 0;
+    width: 150px;
+    height: 230px;
+
+    .card {
+        position: relative;
+        background-color: white;
+        border-radius: 4px;
+        padding: 16px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .position {
+            position: absolute;
+            bottom: -20px;
+            border: 4px solid white;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #666;
+            &__p {
+                color: white;
+            }
+        }
+        .number {
+            font-size: 48px;
+            font-weight: bold;
+            color: #333;
+        }
+    }
+
+    &--blue {
+        @extend .cardBackground;
+        background-image: linear-gradient(to top, #303794, #1d459a, #07519e, #005da0, #0f67a0);
+        .card {
+            .position {
+                @extend .position;
+                background-color: #1d459a;
+            }
+        }
+    }
+    &--red {
+        @extend .cardBackground;
+        background-image: linear-gradient(to top, #dc4b1e, #e4601a, #eb7417, #f08716, #f59a18);
+        .card {
+            .position {
+                @extend .position;
+                background-color: #e4601a;
+            }
+        }
+    }
+    &--green {
+        @extend .cardBackground;
+        background-image: linear-gradient(to top, #3f9e60, #19a785, #00aea6, #2ab3c1, #59b6d3);
+        .card {
+            .position {
+                @extend .position;
+                background-color: #19a785;
+            }
+        }
+    }
+    &--purple {
+        @extend .cardBackground;
+        background-image: linear-gradient(to top, #7b3fbf, #8c4ec0, #9f5dc1, #b36ac1, #c877c1);
+        .card {
+            .position {
+                @extend .position;
+                background-color: #8c4ec0;
+            }
+        }
+    }
+}
+
