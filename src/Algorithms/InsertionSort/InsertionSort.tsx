@@ -88,8 +88,8 @@ function InsertionSort() {
         setCards(initialCardsProps);
     }, []);
 
-    function colorRandom() {
-        const colors = ["blue", "red", "green", "purple"];
+    function colorRandom(): "blue" | "red" | "green" | "purple" {
+        const colors = ["blue", "red", "green", "purple"] as const;
         const randomIndex = Math.floor(Math.random() * colors.length);
         return colors[randomIndex];
     }
