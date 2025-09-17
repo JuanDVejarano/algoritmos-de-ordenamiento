@@ -36,5 +36,5 @@ jobs:
               env:
                   GH_TOKEN: ${{ secrets.GH_TOKEN }}
               run: |
-                  git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/JuanDVejarano/page-herjep.git
+                  git remote set-url origin https://x-access-token:${GH_TOKEN}@github.com/JuanDVejarano/algoritmos-de-ordenamiento.git
                   npm run deploy
